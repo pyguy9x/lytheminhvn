@@ -1,0 +1,9 @@
+1/ You can get source video by api but it only in sd quality.
+
+2/ If you need to get source video by api, make sure you know to get accesstoken by this way:
+
+Go to https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed
+Search for EAAA... it is your accesstoken.
+3/ https://graph.facebook.com/v10.0/(page/group/userid)_videoid?fields=source&access_token=your_accesstoken
+
+example https://graph.facebook.com/v10.0/1389311341281276_2668264723385925?fields=source&access_token=your_accesstoken finally you can get private video or public video from facebook by graph api
