@@ -1,5 +1,5 @@
 '''
-VNExpress crawler: title, publish date and link
+VNExpress crawler: only title of site
 Coded by: Ly The Minh
 All rights reserved (C) July-2021
 '''
@@ -18,7 +18,7 @@ with open("rss.txt","r") as file:
 base_url = [f"https://vnexpress.net/rss/{i}.rss" for i in rss_db]
 # base_url = "https://vnexpress.net/rss/so-hoa.rss"
 # Saving file
-with open("vnexpress_link.txt","w",encoding="utf-8") as file:
+with open("vnexpress5.txt","w",encoding="utf-8") as file:
 	for u in base_url:
 		temp = u.split("/")[4]
 		catagory= temp[0:len(temp)-4] #=> tim-moi-nhat
@@ -38,12 +38,13 @@ with open("vnexpress_link.txt","w",encoding="utf-8") as file:
 		for i,v in enumerate(title):	
 			# txt = f'{v.text} \nNgày đăng: {pub_date[i].text}\n{url[i].text}\n'
 			# data = f'{v.text}-Ngày đăng: {pub_date[i].text}=>{url[i].text}\n'
-			txt = v.text# title			
+			txt = v.text			
 			if "Tin nhanh VnExpress" not in str(txt):
 				print(f"{txt} _ [{catagory}] ")
-				data = v.text+f" ({pub_date[i].text})=>{url[i].text}\n"
-				file.write(data)
+				# data = v.text+f"({pub_date[i].text})=>{url[i].text}\n"
+				# file.write(data)
 				# file.write(f"{txt} _ [{catagory}]\n")
+				file.write(f"{txt}\n")
 		print(f'\nTotal news in {u}: {len(title)}')
 		print("="*60)
 		time.sleep(1) # Delay

@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 # -------------------Craw all------------------------------
 # start_urls = [f'https://ghiencongnghe.info/dien-thoai/android/page/{i}' for i in range(1,16)]
 # start_urls = [f'https://ghiencongnghe.info/may-tinh/windows/page/{i}' for i in range(1,16)]
-start_urls = [f'https://ghiencongnghe.info/may-tinh/macos/page/{i}' for i in range(1,16)]
+start_urls = [f'https://ghiencongnghe.info/may-tinh/macos/page/{i}' for i in range(1,6)]
 # start_urls = [f'https://ghiencongnghe.info/dien-thoai/ios/page/{i}' for i in range(1,20)]
 formatted_links = []
 print("Getting link...")

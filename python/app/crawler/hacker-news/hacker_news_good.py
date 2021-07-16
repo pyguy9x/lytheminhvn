@@ -23,8 +23,10 @@ from bs4 import BeautifulSoup
 # 	print(dict(formatted_links[i])['title'])
 #--------------------------------------
 # -------------------Craw all------------------------------
-start_urls = [f'https://news.ycombinator.com/news?p={i}' for i in range(1,26)]
+start_urls = [f'https://news.ycombinator.com/news?p={i}' for i in range(1,6)]
 formatted_links = []
+print("Crawling...")
+
 for i in start_urls:
 	r = requests.get(i)
 	# Next: https://news.ycombinator.com/news?p=3 to 25
